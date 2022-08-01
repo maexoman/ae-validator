@@ -1,0 +1,33 @@
+{
+	"compilerOptions": {
+		"target": "ES6",
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
+		"module": "ES6",
+		"rootDir": "./src",
+		"declaration": true,
+		"outDir": "./lib",
+		"newLine": "crlf",
+		"declarationDir": "./types",
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"strict": true,
+		"noImplicitAny": true,
+		"strictNullChecks": true,
+		"strictFunctionTypes": true,
+		"strictBindCallApply": true,
+		"strictPropertyInitialization": true,
+		"noImplicitThis": true,
+		"useUnknownInCatchVariables": true,
+		"alwaysStrict": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"exactOptionalPropertyTypes": true,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true,
+		"noUncheckedIndexedAccess": true,
+		"noImplicitOverride": true
+	},
+	"include": ["src"],
+	"exclude": ["node_modules", "**/__tests__/*"]
+}
