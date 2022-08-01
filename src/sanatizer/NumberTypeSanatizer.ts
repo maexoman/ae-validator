@@ -7,6 +7,11 @@
 import ConstError from '../errors/all/ConstError';
 import EnumError from '../errors/all/EnumError';
 import TypeError from '../errors/all/TypeError';
+import ExclusiveMaximumError from '../errors/number/ExclusiveMaximumError';
+import ExclusiveMinimumError from '../errors/number/ExclusiveMinimumError';
+import MaximumError from '../errors/number/MaximumError';
+import MinimumError from '../errors/number/MinimumError';
+import MultipleOfError from '../errors/number/MultipleOfError';
 import { TypeOptions } from '../types/Types';
 import TypeSanatizer from './TypeSanatizer';
 
@@ -179,23 +184,38 @@ export default class NumberTypeSanatizer extends TypeSanatizer {
 		}
 
 		if (this.failsMinimumCheck (options, value as number)) {
-			throw new Error (path.concat ('minimum').join ('/'));
+			throw new MinimumError (
+				path,
+				this.getOption<number> (options, 'minimum')
+			);
 		}
 
 		if (this.failsExclusiveMinimumCheck (options, value as number)) {
-			throw new Error (path.concat ('exclusiveMinimum').join ('/'));
+			throw new ExclusiveMinimumError (
+				path,
+				this.getOption<number> (options, 'exclusiveMinimum')
+			);
 		}
 
 		if (this.failsMaximumCheck (options, value as number)) {
-			throw new Error (path.concat ('maximum').join ('/'));
+			throw new MaximumError (
+				path,
+				this.getOption<number> (options, 'maximum')
+			);
 		}
 
 		if (this.failsExclusiveMaximumCheck (options, value as number)) {
-			throw new Error (path.concat ('exclusiveMaximum').join ('/'));
+			throw new ExclusiveMaximumError (
+				path,
+				this.getOption<number> (options, 'exclusiveMaximum')
+			);
 		}
 
 		if (this.failsMultipleOfCheck (options, value as number)) {
-			throw new Error (path.concat ('multipleOf').join ('/'));
+			throw new MultipleOfError (
+				path,
+				this.getOption<number> (options, 'multipleOf')
+			);
 		}
 
 		return value as number;
