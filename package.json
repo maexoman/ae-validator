@@ -1,5 +1,5 @@
 {
-	"name": "validation",
+	"name": "ae-validator",
 	"version": "1.0.0",
 	"description": "Object validator using typescript annotaions",
 	"main": "lib/index.js",
