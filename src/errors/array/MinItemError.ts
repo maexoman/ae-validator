@@ -1,4 +1,4 @@
-import SanatizationError from './SanatizationError';
+import SanatizationError from '../SanatizationError';
 
 /**
  * @author Maximilian A. Heinrich <mex.heinrich@gmail.com>
@@ -17,5 +17,9 @@ export default class MinItemError extends SanatizationError {
 	public constructor (path: PropertyKey[], expected: number) {
 		super (path.concat ('minItems'));
 		this.expected = expected;
+	}
+
+	public override toJSON (): object {
+		return {...super.toJSON (), ...{expected: this.expected}};
 	}
 }

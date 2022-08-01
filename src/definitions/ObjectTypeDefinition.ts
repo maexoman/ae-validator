@@ -4,7 +4,7 @@
  * @version 1.0.0
  */
 
-import DataObject from '../../DataObject';
+import DataObject from '../DataObject';
 import ObjectTypeSanatizer from '../sanatizer/ObjectTypeSanatizer';
 import AbstractTypeDefinition from './AbstractTypeDefinition';
 

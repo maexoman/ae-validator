@@ -21,4 +21,8 @@ export default class EnumError extends SanatizationError {
 		super (path.concat ('enum'));
 		this.expected = Array.from (expected.values () as Iterable<any>);
 	}
+
+	public override toJSON (): object {
+		return {...super.toJSON (), ...{expected: this.expected}};
+	}
 }

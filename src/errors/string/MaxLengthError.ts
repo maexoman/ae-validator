@@ -18,4 +18,8 @@ export default class MaxLengthError extends SanatizationError {
 		super (path.concat ('maxLength'));
 		this.expected = expected;
 	}
+
+	public override toJSON (): object {
+		return {...super.toJSON (), ...{expected: this.expected}};
+	}
 }

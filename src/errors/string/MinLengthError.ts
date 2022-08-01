@@ -18,4 +18,8 @@ export default class MinLengthError extends SanatizationError {
 		super (path.concat ('minLength'));
 		this.expected = expected;
 	}
+
+	public override toJSON (): object {
+		return {...super.toJSON (), ...{expected: this.expected}};
+	}
 }

@@ -2,6 +2,7 @@ import * as AnyAnnotations from './annotations/AnyTypeAnnotations';
 import * as ArrayAnnotaions from './annotations/ArrayTypeAnnotations';
 import * as NumberAnnotations from './annotations/NumberTypeAnnotations';
 import * as ObjectAnnotations from './annotations/ObjectTypeAnnotations';
+import * as SpecificTypeAnnotations from './annotations/SpecificTypeAnnotations';
 import * as StringAnnotations from './annotations/StringTypeAnnotations';
 
 export const Required = AnyAnnotations.Required;
@@ -32,3 +33,5 @@ export const ArrayType = ArrayAnnotaions.ArrayType;
 export const MinItems = ArrayAnnotaions.MinItems;
 export const MaxItems = ArrayAnnotaions.MaxItems;
 export const Items = ArrayAnnotaions.Items;
+
+export const EMail = SpecificTypeAnnotations.EMail;

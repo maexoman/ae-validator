@@ -15,7 +15,11 @@ export default class MaxItemError extends SanatizationError {
 	 * @param expected expected maximum.
 	 */
 	public constructor (path: PropertyKey[], expected: number) {
-		super (path.concat ('maxItem'));
+		super (path.concat ('maxItems'));
 		this.expected = expected;
+	}
+
+	public override toJSON (): object {
+		return {...super.toJSON (), ...{expected: this.expected}};
 	}
 }

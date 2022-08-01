@@ -12,7 +12,14 @@ export default class SanatizationError extends Error {
 	 * @param path path to the property that failed validation.
 	 */
 	public constructor (path:  PropertyKey[]) {
-		super ();
+		super (path.join ('/'));
 		this.path = path;
+	}
+
+	public toJSON (): object {
+		return {
+			type: 'SanatizationError',
+			path: this.path
+		};
 	}
 }

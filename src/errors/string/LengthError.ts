@@ -18,4 +18,8 @@ export default class LengthError extends SanatizationError {
 		super (path.concat ('length'));
 		this.expected = expected;
 	}
+
+	public override toJSON (): object {
+		return {...super.toJSON (), ...{expected: this.expected}};
+	}
 }

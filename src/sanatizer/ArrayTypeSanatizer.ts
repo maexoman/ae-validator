@@ -90,7 +90,7 @@ export default class ArrayTypeSanatizer extends TypeSanatizer {
 	 * @param path path to the property that failed validation.
 	 * @returns sanatized value.
 	 */
-	public static sanatizeOrFail (
+	public static override sanatizeOrFail (
 		options: TypeOptions,
 		value: unknown,
 		path: PropertyKey[]

@@ -21,4 +21,8 @@ export default class ConstError extends SanatizationError {
 		super (path.concat ('const'));
 		this.expected = expected;
 	}
+
+	public override toJSON (): object {
+		return {...super.toJSON (), ...{expected: this.expected}};
+	}
 }

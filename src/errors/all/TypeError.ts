@@ -17,4 +17,8 @@ export default class TypeError extends SanatizationError {
 		super (path.concat ('type'));
 		this.expected = expected;
 	}
+
+	public override toJSON (): object {
+		return {...super.toJSON (), ...{expected: this.expected}};
+	}
 }
