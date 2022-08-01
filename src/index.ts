@@ -1,3 +1,8 @@
+
+import DataObject from './DataObject';
+import Optional from './Optional';
+import Types from './Types';
+
 import * as AnyAnnotations from './annotations/AnyTypeAnnotations';
 import * as ArrayAnnotaions from './annotations/ArrayTypeAnnotations';
 import * as NumberAnnotations from './annotations/NumberTypeAnnotations';
@@ -35,3 +40,6 @@ export const MaxItems = ArrayAnnotaions.MaxItems;
 export const Items = ArrayAnnotaions.Items;
 
 export const EMail = SpecificTypeAnnotations.EMail;
+
+export default Types;
+export { DataObject, Optional };

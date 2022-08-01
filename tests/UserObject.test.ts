@@ -15,7 +15,7 @@ import {
 	ArrayType,
 	MaxItems,
 	Items
-} from '../src/Annotations';
+} from '../src/index';
 import Optional from '../src/Optional';
 import { MinItems } from '../src/annotations/ArrayTypeAnnotations';
 import Types from '../src/Types';

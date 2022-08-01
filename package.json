@@ -1,12 +1,13 @@
 {
 	"name": "@maexoman/ae-validator",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"description": "Object validator using typescript annotaions",
-	"main": "lib/Types.js",
+	"main": "lib/index.js",
 	"files": [
-		"lib/**/*"
+		"lib/**/*",
+		"types/**/*"
 	],
-	"types": "./types",
+	"types": "types/index.d.ts",
 	"scripts": {
 		"build": "rm -rf lib && rm -rf types && tsc",
 		"test": "jest --config jestconfig.json"
