@@ -10,7 +10,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/maexoman/validation.git"
+		"url": "git+https://github.com/maexoman/ae-validator.git"
 	},
 	"keywords": [
 		"validation"
@@ -18,9 +18,9 @@
 	"author": "maexoman",
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/maexoman/validation/issues"
+		"url": "https://github.com/maexoman/ae-validator/issues"
 	},
-	"homepage": "https://github.com/maexoman/validation#readme",
+	"homepage": "https://github.com/maexoman/ae-validator#readme",
 	"devDependencies": {
 		"@types/node": "^18.6.3",
 		"typescript": "^4.7.4"
