@@ -89,12 +89,12 @@ export default class TypeSanatizer {
 
 	/**
 	 * Sanatization funciton to be implemented by the type sanatizers.
-	 * @param options all sanatization options.
-	 * @param value value to sanatize.
-	 * @param path path to the property that failed validation.
+	 * @param _options all sanatization options.
+	 * @param _value value to sanatize.
+	 * @param _path path to the property that failed validation.
 	 * @returns sanatized value.
 	 */
-	protected static sanatizeOrFail (options: TypeOptions, value: unknown, path: PropertyKey[]): any | Optional<any> {
+	protected static sanatizeOrFail (_options: TypeOptions, _value: unknown, _path: PropertyKey[]): any | Optional<any> {
 		throw new Error ('Make sure to provide a proper type');
 	}
 }
